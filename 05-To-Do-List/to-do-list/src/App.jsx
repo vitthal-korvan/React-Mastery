@@ -7,9 +7,9 @@ import Todos from "./Todos";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, title: "Learn Guitar", completed: false },
-    { id: 2, title: "Learn React", completed: true },
-    { id: 3, title: "Find Good watlz in Am", completed: false },
+    // { id: 1, title: "Learn Guitar", completed: false },
+    // { id: 2, title: "Learn React", completed: true },
+    // { id: 3, title: "Find Good watlz in Am", completed: false },
   ]);
   const addTodo = (newTodo) => {
     setTodos((prevState) => [...prevState, newTodo]);
