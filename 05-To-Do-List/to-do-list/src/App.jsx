@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import TodoForm from "./TodoForm";
 import Todos from "./Todos";
 
-// lifting the state up
 
 function App() {
   const [todos, setTodos] = useState([
