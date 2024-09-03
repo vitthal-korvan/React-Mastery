@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import HandleMultipleInputs from './HandleMultipleInputs'
+import ExamplUseRef from './ExamplUseRef'
+import DOMUseRef from './DOMUseRef'
+import { HandleInputUseRef } from './HandleInputUseRef'
 
 // function App() {
 //   const [gender, setGender] = useState('')
@@ -39,7 +42,10 @@ import HandleMultipleInputs from './HandleMultipleInputs'
 function App(){
   return (
     <>
-    <HandleMultipleInputs/>
+    {/* <HandleMultipleInputs/> */}
+    {/* <ExamplUseRef/> */}
+    {/* <DOMUseRef/> */}
+    <HandleInputUseRef/>
     </>
   )
 }
