@@ -9,10 +9,18 @@ export function FetchData() {
   //for loading Effect => Throttling
   const[isLoading, setIsLoading] = useState(true);
 
+  //For error checking
+  const [error, setError] = useState(false)
+
   async function fetchedData() {
     const response = await fetch(URL);
-    const data = await response.json();
-    setUsers(data);
+    if (response.status >=200 && response.status<=299) {
+      const data = await response.json();
+      setUsers(data);
+    }
+    else{
+      setError(true)
+    }
     setIsLoading(false)
   }
   useEffect(() => {
@@ -20,7 +28,11 @@ export function FetchData() {
   }, []);
 
   if(isLoading){
-      return <h1>Loading ...</h1>
+      return <h1>Loading ....</h1>
+  }
+
+  if (error) {
+    return <h1>Something went Wrong</h1>
   }
   return (
     <div>
