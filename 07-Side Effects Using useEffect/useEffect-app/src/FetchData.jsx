@@ -12,8 +12,14 @@ export function FetchData() {
   //For error checking
   const [error, setError] = useState(false)
 
-  async function fetchedData() {
-    const response = await fetch(URL);
+  useEffect(() =>{
+    //for Aborting on fetching the data
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    async function fetchedData() {
+      //we can pass signal onject 
+    const response = await fetch(URL, { signal:signal });
     if (response.status >=200 && response.status<=299) {
       const data = await response.json();
       setUsers(data);
@@ -23,8 +29,14 @@ export function FetchData() {
     }
     setIsLoading(false)
   }
-  useEffect(() => {
+
     fetchedData();
+    //this return is for cleanup function for useEffect
+    return ()=>{
+      console.log('aborting request....');
+      controller.abort()
+      
+    }
   }, []);
 
   if(isLoading){

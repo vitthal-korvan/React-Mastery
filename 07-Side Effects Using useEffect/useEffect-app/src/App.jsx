@@ -1,6 +1,14 @@
 import { useState } from "react";
 // import { CleanupFunctionDemo } from "./CleanupFunctionDemo";
-import { MouseMoveEvent } from "./MouseMoveEvent";
+// import { MouseMoveEvent } from "./MouseMoveEvent";
+import {FetchData} from "./FetchData"
+
+//Strict Mode -> for useEffect ->
+
+//useEffect run
+//cleanup function
+//useEffect run again
+
 
 function App() {
   const [showComponent, setShowComponent] = useState(true);
@@ -17,7 +25,7 @@ function App() {
         checked={showComponent}
         onChange={() => setShowComponent(!showComponent)}
       />
-      {showComponent && <MouseMoveEvent />}
+      {showComponent && <FetchData />}
     </>
   );
 }
