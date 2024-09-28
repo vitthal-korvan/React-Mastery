@@ -17,7 +17,7 @@ function Todo({ id, completed, title, toggleCompleted, removeTodo }) {
         <ImCross />
       </div>
     </div>
-  );
+  ); 
 }
 
 export default Todo;

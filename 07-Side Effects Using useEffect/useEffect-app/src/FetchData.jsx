@@ -15,7 +15,11 @@ export function FetchData() {
   useEffect(() =>{
     //for Aborting on fetching the data
     const controller = new AbortController();
+    console.log(controller);
+    
     const signal = controller.signal;
+    console.log(signal);
+    
 
     async function fetchedData() {
       //we can pass signal onject 

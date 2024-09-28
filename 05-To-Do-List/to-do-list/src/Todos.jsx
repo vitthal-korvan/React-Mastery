@@ -10,7 +10,7 @@ function Todos({ todos, toggleCompleted, removeTodo }) {
           toggleCompleted={toggleCompleted}
           removeTodo={removeTodo}
         />
-      ))}
+      ))} 
     </div>
   );
 }

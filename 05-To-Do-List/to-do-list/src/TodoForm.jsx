@@ -10,7 +10,7 @@ function TodoForm({ addTodo }) {
         autoClose: 2000,
       });
       return;
-    }
+    } 
     const newTodo = {
       title: title,
       completed: false,
