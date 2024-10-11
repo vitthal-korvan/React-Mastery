@@ -11,14 +11,13 @@ export function Todo({ id, title, completed, dispatch }) {
     <>
       <div
         style={{
+            textAlign:"center",
           fontFamily: "sans-serif",
           padding: "1rem",
           margin: "1rem",
           backgroundColor: "gray",
           borderRadius: "1rem",
           width: "50vw",
-          position: "relative",
-          left: "25%",
         }}
       >
         <h4>ID : {id}</h4>
@@ -38,7 +37,15 @@ export function Todo({ id, title, completed, dispatch }) {
         >
           Delete
         </button>
-        <button onClick={handleToggle}>Toggle Button</button>
+        <button
+          onClick={handleToggle}
+          style={{
+            margin:"0.2rem",
+            padding: "0.6rem 1.4rem",
+          }}
+        >
+          Toggle{" "}
+        </button>
       </div>
     </>
   );
