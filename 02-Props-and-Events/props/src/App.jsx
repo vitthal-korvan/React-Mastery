@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import { Greetings } from './components/Greetings'
+import { Greetings } from "./components/Greetings";
 
 function App() {
-
   return (
     <>
-      <Greetings firstName='Vitthal' lastName='korvan'/>
-      <Greetings firstName='Luffy' lastName='Monkey'/>
-      <Greetings/>
+      <Greetings firstName="Vitthal" lastName="korvan">
+        <h2> Hey! User Welcome </h2>
+      </Greetings>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
