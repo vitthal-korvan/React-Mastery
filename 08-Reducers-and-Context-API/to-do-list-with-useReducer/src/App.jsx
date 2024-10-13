@@ -1,6 +1,9 @@
 import { useReducer } from "react";
 import { AddTodoForm } from "./AddTodoForm";
 import { Todos } from "./Todos";
+import { createContext } from "react";
+
+export const TodosContext = createContext()
 
 function reducer(todos, action) {
   if (action.type === "Add_Todo") {
@@ -31,10 +34,13 @@ function App() {
   const [todos, dispatch] = useReducer(reducer, initialTodos);
 
   return (
-    <>
-      <AddTodoForm  dispatch={dispatch}/>
-      <Todos todos={todos} dispatch={dispatch} />
-    </>
+    <TodosContext.Provider value={{
+        dispatch:dispatch,
+        todos:todos
+    }}>
+      <AddTodoForm  />
+      <Todos />
+    </TodosContext.Provider>
   );
 }
 

@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodosContext } from "./App";
 
-export function Todo({ id, title, completed, dispatch }) {
+export function Todo({ id, title, completed}) {
+   const { dispatch } = useContext(TodosContext);
   function handleDelete() {
-    dispatch({type:"Delete_Todo", payload:{id:id}});
+    dispatch({ type: "Delete_Todo", payload: { id: id } });
   }
-  function handleToggle(){
-      dispatch({ type: "Toggle_Todo", payload: { id: id } });
+  function handleToggle() {
+    dispatch({ type: "Toggle_Todo", payload: { id: id } });
   }
   return (
     <>
       <div
         style={{
-            textAlign:"center",
+          textAlign: "center",
           fontFamily: "sans-serif",
           padding: "1rem",
           margin: "1rem",
@@ -40,7 +42,7 @@ export function Todo({ id, title, completed, dispatch }) {
         <button
           onClick={handleToggle}
           style={{
-            margin:"0.2rem",
+            margin: "0.2rem",
             padding: "0.6rem 1.4rem",
           }}
         >
