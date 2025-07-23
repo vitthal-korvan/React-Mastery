@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vw;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right bottom, lightgreen, green);
+}
+
+button:active{
+  scale: 0.97;
+}
+
+.box {
+  height: 400px;
+  width: 400px;
+  border-radius: 25px;
+  background: linear-gradient(to right bottom, rgb(240, 114, 139), rgb(200, 5, 44));
+}
